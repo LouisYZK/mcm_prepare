@@ -29,7 +29,7 @@ def train(document, y):
     clf.partial_fit(X, [y])
 
 def mysql_entry(document, y):
-    conn = pymysql.connect(host = '172.30.10.101',user = 'root',password = '',db = 'ML')
+    conn = pymysql.connect(host = 'yzk.mysql.pythonanywhere-services.com',user = 'yzk',password = 'yangzhikai668',db = 'ML')
     c = conn.cursor()
     sql = 'insert into movie_text values(%s,%s)'
     c.execute(sql,(document,y))
@@ -53,16 +53,19 @@ def index():
 def results():
     form = ReviewForm(request.form)
     if request.method == 'POST' and form.validate():
+        # 得到评论 这个movieriew名称是怎么来的，下面我会在前端做下解释
         review = request.form['moviereview']
         y, proba = classify(review)
+        # 在前端渲染结果
         return render_template('results.html',
                                 content=review,
                                 prediction=y,
                                 probability=round(proba*100, 2))
     return render_template('reviewform.html', form=form)
-
+# 反馈功能模块，用户点击是否情感判断正确，将用户给的正确标签和评论添加到数据库中，并使学习器学习
 @app.route('/thanks', methods=['POST'])
 def feedback():
+    # 这些名称同样我在下面将前端时讲述
     feedback = request.form['feedback_button']
     review = request.form['review']
     prediction = request.form['prediction']

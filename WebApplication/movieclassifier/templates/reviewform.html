@@ -12,6 +12,7 @@
 
 <form method=post action="/results">
   <dl>
+      <!-- 这里传入了样式参数 ，表单名称就是从这里来的-->
 	{{ render_field(form.moviereview, cols='30', rows='10') }}
   </dl>
   <div>
