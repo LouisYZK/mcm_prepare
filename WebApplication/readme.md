@@ -1,5 +1,7 @@
-# Ch9:Embedding a Machine Learning Model into a Web Application
-> 前面的ML模型都是在本地运行计算的，此chapter介绍如何将模型应用在Web app上以获得实时学习、应用
+# Embedding a Machine Learning Model into a Web Application
+# 部署上线机器学习Web APP -- 以影评情感分析模型为例
+
+> 前面的ML模型都是在本地运行计算的，Python machine learning chapter9介绍如何将模型应用在Web app上以获得实时学习、应用
 **这一章主要偏机器学习功能Web的简单开发，与算法关系不大。没有跳过反而收获不少。不得不佩服作者在构思’算法+系统‘时所作出的为读者充分考虑的思想**
 
 本章主要实现下列功能：（将情感分析学习器上线Web，使之能即时搜集新数据、学习新数据、更新学习器、做出预测。最后作者还提供了一种上传到公共Web空间的一种简便方式）
