@@ -1,8 +1,8 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 """
 Created on Mon Feb  5 13:09:29 2018
 
-@author: Administrator
+@author: Administ
 """
 from sklearn import datasets
 X = datasets.load_iris().data[:,0:2]
