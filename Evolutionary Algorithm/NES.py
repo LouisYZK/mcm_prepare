@@ -7,7 +7,7 @@ numpy
 matplotlib
 """
 import numpy as np
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as pltS
 import tensorflow as tf
 from tensorflow.contrib.distributions import MultivariateNormalFullCovariance
 
