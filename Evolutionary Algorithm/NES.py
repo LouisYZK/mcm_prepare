@@ -46,6 +46,7 @@ for i in range(n):
 plt.contourf(X, Y, -Z, 100, cmap=plt.cm.rainbow); plt.ylim(-20, 20); plt.xlim(-20, 20); plt.ion()
 
 # training
+
 for g in range(N_GENERATION):
     kids = sess.run(make_kid)
     kids_fit = get_fitness(kids)
