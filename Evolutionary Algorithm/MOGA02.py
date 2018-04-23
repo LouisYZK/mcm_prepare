@@ -2,7 +2,8 @@
 # 尝试从矩阵B为初始化集群，看是否能加快收敛速度
 import numpy as np 
 import pandas as pd 
-df = pd.read_excel('模型参数.xls',header =0 )
+df1 = pd.read_excel('模型参数.xls',sheetname='Sheet1',header =0 )
+df2 = pd.read_excel('模型参数.xls',sheetname='Dij',header=None)
 print(df.head())
 DNA_SIZE =  55#避难点 DNA序列   
 POP_SIZE = 1000          
