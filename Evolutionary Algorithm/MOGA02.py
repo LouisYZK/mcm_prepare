@@ -4,7 +4,6 @@ import numpy as np
 import pandas as pd 
 df1 = pd.read_excel('模型参数.xls',sheetname='Sheet1',header =0 )
 df2 = pd.read_excel('模型参数.xls',sheetname='Dij',header=None)
-print(df.head())
 DNA_SIZE =  55#避难点 DNA序列   
 POP_SIZE = 1000          
 CROSS_RATE = 0.5         
@@ -131,6 +130,6 @@ for _ in range(N_GENERATIONS):
 	count_all.append(count/POP_SIZE)
 	print("已经循环",_,'轮次')
 	if POP_SIZE > 100:
-		POP_SIZE = POP_SIZE-1 
+		POP_SIZE = POP_SIZE-5 
 	else:
 		POP_SIZE = 100
